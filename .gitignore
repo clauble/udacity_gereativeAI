@@ -1,2 +1,19 @@
+# folders
 .idea/
 .venv/
+__pycache__/
+trained-lora-model/
+tmp_trainer/
+ft-distilbert/
+
+
+# file types
+*.safetensors
+*.bak
+*.$$$
+
+# special files (too large and not neccessary):
+language_of_flowers.html
+embeddings.csv
+distances.csv
+distances*.csv
