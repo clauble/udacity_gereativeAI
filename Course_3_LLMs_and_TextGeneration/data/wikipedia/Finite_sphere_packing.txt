@@ -1,0 +1,1484 @@
+In mathematics, the theory of finite sphere packing concerns the question of how a finite number of equally-sized spheres can be most efficiently packed. The question of packing finitely many spheres has only been investigated in detail in recent decades, with much of the groundwork being laid by László Fejes Tóth.
+The similar problem for infinitely many spheres has a longer history of investigation, from which the Kepler conjecture is most well-known. Atoms in crystal structures can be simplistically viewed as closely-packed spheres and treated as infinite sphere packings thanks to their large number.
+Sphere packing problems are distinguished between packings in given containers and free packings. This article primarily discusses free packings.
+
+
+== Packing and convex hulls ==
+
+In general, a packing refers to any arrangement of a set of spatially-connected, possibly differently-sized or differently-shaped objects in space such that none of them overlap. In the case of the finite sphere packing problem, these objects are restricted to equally-sized spheres. Such a packing of spheres determines a specific volume known as the convex hull of the packing, defined as the smallest convex set that includes all the spheres.
+
+
+== Packing shapes ==
+There are many possible ways to arrange spheres, which can be classified into three basic groups: sausage, pizza, and cluster packing.
+		
+			
+			
+		
+		
+			
+			
+		
+		
+			
+			
+		
+
+
+=== Sausage packing ===
+An arrangement in which the midpoint of all the spheres lie on a single straight line is called a sausage packing, as the convex hull has a sausage-like shape. An approximate example in real life is the packing of tennis balls in a tube, though the ends must be rounded for the tube to coincide with the actual convex hull.
+
+
+=== Pizza packing ===
+If all the midpoints lie on a plane, the packing is a pizza packing. Approximate real-life examples of this kind of packing include billiard balls being packed in a triangle as they are set up. This holds for packings in three-dimensional Euclidean space.
+
+
+=== Cluster packing ===
+If the midpoints of the spheres are arranged throughout 3D space, the packing is termed a cluster packing. Real-life approximations include fruit being packed in multiple layers in a box.
+
+
+=== Relationships between types of packing ===
+By the given definitions, any sausage packing is technically also a pizza packing, and any pizza packing is technically also a cluster packing. In the more general case of 
+  
+    
+      
+        d
+      
+    
+    {\displaystyle d}
+  
+ dimensions, "sausages" refer to one-dimensional arrangements, "clusters" to 
+  
+    
+      
+        d
+      
+    
+    {\displaystyle d}
+  
+-dimensional arrangements, and "pizzas" to those with an in-between number of dimensions.
+One or two spheres always make a sausage. With three, a pizza packing (that is not also a sausage) becomes possible, and with four or more, clusters (that are not also pizzas) become possible.
+
+
+== Optimal packing ==
+The empty space between spheres varies depending on the type of packing. The amount of empty space is measured in the packing density, which is defined as the ratio of the volume of the spheres to the volume of the total convex hull. The higher the packing density, the less empty space there is in the packing and thus the smaller the volume of the hull (in comparison to other packings with the same number and size of spheres).
+To pack the spheres efficiently, it might be asked which packing has the highest possible density. It is easy to see that such a packing should have the property that the spheres lie next to each other, that is, each sphere should touch another on the surface. A more exact phrasing is to form a graph which assigns a vertex for each sphere and connects vertices with edges whenever the corresponding spheres if their surfaces touch. Then the highest-density packing must satisfy the property that the corresponding graph is connected.
+
+
+== Sausage catastrophe ==
+With three or four spheres, the sausage packing is optimal. It is believed that this holds true for any 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ up to 
+  
+    
+      
+        55
+      
+    
+    {\displaystyle 55}
+  
+ along with 
+  
+    
+      
+        n
+        =
+        57
+        ,
+        58
+        ,
+        63
+        ,
+        64
+      
+    
+    {\displaystyle n=57,58,63,64}
+  
+. For 
+  
+    
+      
+        n
+        =
+        56
+        ,
+        59
+        ,
+        60
+        ,
+        61
+        ,
+        62
+      
+    
+    {\displaystyle n=56,59,60,61,62}
+  
+ and 
+  
+    
+      
+        n
+        ≥
+        65
+      
+    
+    {\displaystyle n\geq 65}
+  
+, a cluster packing exists that is more efficient than the sausage packing, as shown in 1992 by Jörg Wills and Pier Mario Gandini. It remains unknown what these most efficient cluster packings look like. For example, in the case 
+  
+    
+      
+        n
+        =
+        56
+      
+    
+    {\displaystyle n=56}
+  
+, it is known that the optimal packing is not a tetrahedral packing like the classical packing of cannon balls, but is likely some kind of octahedral shape.
+The sudden transition in optimal packing shape is jokingly known by some mathematicians as the sausage catastrophe (Wills, 1985). The designation catastrophe comes from the fact that the optimal packing shape suddenly shifts from the orderly sausage packing to the relatively unordered cluster packing and vice versa as one goes from one number to another, without a satisfying explanation as to why this happens. Even so, the transition in three dimensions is relatively tame; in four dimensions, the sudden transition is conjectured to happen around 377,000 spheres.
+For dimensions 
+  
+    
+      
+        d
+        ≤
+        10
+      
+    
+    {\displaystyle d\leq 10}
+  
+, the optimal packing is always either a sausage or a cluster, and never a pizza. It is an open problem whether this holds true for all dimensions. This result only concerns spheres and not other convex bodies; in fact Gritzmann and Arhelger observed that for any dimension 
+  
+    
+      
+        d
+        ≥
+        3
+      
+    
+    {\displaystyle d\geq 3}
+  
+ there exists a convex shape for which the closest packing is a pizza.
+
+
+=== Example of the sausage packing being non-optimal ===
+In the following section it is shown that for 455 spheres the sausage packing is non-optimal, and that there instead exists a special cluster packing that occupies a smaller volume.
+The volume of a convex hull of a sausage packing with 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ spheres of radius 
+  
+    
+      
+        r
+      
+    
+    {\displaystyle r}
+  
+ is calculable with elementary geometry. The middle part of the hull is a cylinder with length 
+  
+    
+      
+        h
+        =
+        2
+        r
+        ⋅
+        (
+        n
+        −
+        1
+        )
+      
+    
+    {\displaystyle h=2r\cdot (n-1)}
+  
+ while the caps at the end are half-spheres with radius 
+  
+    
+      
+        r
+      
+    
+    {\displaystyle r}
+  
+. The total volume 
+  
+    
+      
+        
+          V
+          
+            W
+          
+        
+      
+    
+    {\displaystyle V_{W}}
+  
+ is therefore given by.
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  V
+                  
+                    W
+                  
+                
+              
+              
+                
+                =
+                
+                  V
+                  
+                    cylinder
+                  
+                
+                +
+                2
+                ⋅
+                
+                  V
+                  
+                    half-sphere
+                  
+                
+              
+            
+            
+              
+              
+                
+                =
+                
+                  V
+                  
+                    cylinder
+                  
+                
+                +
+                
+                  V
+                  
+                    sphere
+                  
+                
+              
+            
+            
+              
+              
+                
+                =
+                π
+                h
+                
+                  r
+                  
+                    2
+                  
+                
+                +
+                
+                  
+                    4
+                    3
+                  
+                
+                π
+                
+                  r
+                  
+                    3
+                  
+                
+              
+            
+            
+              
+              
+                
+                =
+                π
+                2
+                r
+                ⋅
+                (
+                n
+                −
+                1
+                )
+                ⋅
+                
+                  r
+                  
+                    2
+                  
+                
+                +
+                
+                  
+                    4
+                    3
+                  
+                
+                π
+                
+                  r
+                  
+                    3
+                  
+                
+              
+            
+            
+              
+              
+                
+                =
+                2
+                ⋅
+                
+                  (
+                  
+                    n
+                    −
+                    
+                      
+                        1
+                        3
+                      
+                    
+                  
+                  )
+                
+                π
+                
+                  r
+                  
+                    3
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}V_{W}&=V_{\text{cylinder}}+2\cdot V_{\text{half-sphere}}\\&=V_{\text{cylinder}}+V_{\text{sphere}}\\&=\pi hr^{2}+{\frac {4}{3}}\pi r^{3}\\&=\pi 2r\cdot (n-1)\cdot r^{2}+{\frac {4}{3}}\pi r^{3}\\&=2\cdot \left(n-{\frac {1}{3}}\right)\pi r^{3}\end{aligned}}}
+  
+
+Similarly, it is possible to find the volume of the convex hull of a tetrahedral packing, in which the spheres are arranged so that they form a tetrahedral shape, which only leads to completely filled tetrahedra for specific numbers of spheres. If there are 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ spheres along one edge of the tetrahedron, the total number of spheres 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ is given by
+
+  
+    
+      
+        n
+        =
+        
+          ∑
+          
+            i
+            =
+            1
+          
+          
+            x
+          
+        
+        
+          ∑
+          
+            j
+            =
+            1
+          
+          
+            i
+          
+        
+        j
+        =
+        
+          ∑
+          
+            i
+            =
+            1
+          
+          
+            x
+          
+        
+        
+          
+            
+              i
+              ⋅
+              (
+              i
+              +
+              1
+              )
+            
+            2
+          
+        
+        =
+        
+          
+            
+              x
+              ⋅
+              (
+              x
+              +
+              1
+              )
+              ⋅
+              (
+              x
+              +
+              2
+              )
+            
+            6
+          
+        
+      
+    
+    {\displaystyle n=\sum _{i=1}^{x}\sum _{j=1}^{i}j=\sum _{i=1}^{x}{\frac {i\cdot (i+1)}{2}}={\frac {x\cdot (x+1)\cdot (x+2)}{6}}}
+  
+.
+Now the inradius 
+  
+    
+      
+        r
+      
+    
+    {\displaystyle r}
+  
+ of a tetrahedral with side length 
+  
+    
+      
+        a
+      
+    
+    {\displaystyle a}
+  
+ is
+
+  
+    
+      
+        r
+        =
+        
+          
+            
+              6
+            
+            12
+          
+        
+        ⋅
+        a
+      
+    
+    {\displaystyle r={\frac {\sqrt {6}}{12}}\cdot a}
+  
+.
+From this we have
+
+  
+    
+      
+        a
+        =
+        2
+        
+          
+            6
+          
+        
+        ⋅
+        r
+      
+    
+    {\displaystyle a=2{\sqrt {6}}\cdot r}
+  
+.
+The volume 
+  
+    
+      
+        
+          V
+          
+            T
+          
+        
+      
+    
+    {\displaystyle V_{T}}
+  
+ of the tetrahedron is then given by the formula
+
+  
+    
+      
+        
+          V
+          
+            T
+          
+        
+        =
+        
+          
+            
+              2
+            
+            12
+          
+        
+        ⋅
+        
+          a
+          
+            3
+          
+        
+        =
+        
+          
+            192
+          
+        
+        ⋅
+        
+          r
+          
+            3
+          
+        
+      
+    
+    {\displaystyle V_{T}={\frac {\sqrt {2}}{12}}\cdot a^{3}={\sqrt {192}}\cdot r^{3}}
+  
+
+In the case of many spheres being arranged inside a tetrahedron, the length of an edge 
+  
+    
+      
+        a
+      
+    
+    {\displaystyle a}
+  
+ increases by twice the radius of a sphere for each new layer, meaning that for 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ layers the side length becomes
+
+  
+    
+      
+        a
+        =
+        2
+        ⋅
+        
+          (
+          
+            x
+            −
+            1
+            +
+            
+              
+                6
+              
+            
+          
+          )
+        
+        ⋅
+        r
+      
+    
+    {\displaystyle a=2\cdot \left(x-1+{\sqrt {6}}\right)\cdot r}
+  
+.
+Substituting this value into the volume formula for the tetrahedron, we know that the volume 
+  
+    
+      
+        V
+      
+    
+    {\displaystyle V}
+  
+ of the convex hull must be smaller than the tetrahedron itself, so that
+
+  
+    
+      
+        V
+        <
+        
+          
+            
+              2
+              ⋅
+              
+                
+                  (
+                  
+                    x
+                    −
+                    1
+                    +
+                    
+                      
+                        6
+                      
+                    
+                  
+                  )
+                
+                
+                  3
+                
+              
+              ⋅
+              
+                
+                  2
+                
+              
+              ⋅
+              
+                r
+                
+                  3
+                
+              
+            
+            3
+          
+        
+      
+    
+    {\displaystyle V<{\frac {2\cdot \left(x-1+{\sqrt {6}}\right)^{3}\cdot {\sqrt {2}}\cdot r^{3}}{3}}}
+  
+.
+Taking the number of spheres in a tetrahedron of 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ layers and substituting into the earlier expression to get the volume 
+  
+    
+      
+        
+          V
+          
+            W
+          
+        
+      
+    
+    {\displaystyle V_{\text{W}}}
+  
+ of the convex hull of a sausage packing with the same number of spheres, we have
+
+  
+    
+      
+        
+          V
+          
+            W
+          
+        
+        =
+        
+          
+            
+              x
+              ⋅
+              (
+              x
+              +
+              1
+              )
+              ⋅
+              (
+              x
+              +
+              2
+              )
+              −
+              2
+            
+            3
+          
+        
+        ⋅
+        π
+        
+          r
+          
+            3
+          
+        
+      
+    
+    {\displaystyle V_{\text{W}}={\frac {x\cdot (x+1)\cdot (x+2)-2}{3}}\cdot \pi r^{3}}
+  
+.
+For 
+  
+    
+      
+        x
+        =
+        13
+      
+    
+    {\displaystyle x=13}
+  
+, which translates to 
+  
+    
+      
+        n
+        =
+        455
+      
+    
+    {\displaystyle n=455}
+  
+ spheres the coefficient in front of 
+  
+    
+      
+        
+          r
+          
+            3
+          
+        
+      
+    
+    {\displaystyle r^{3}}
+  
+ is about 2845 for the tetrahedral packing and 2856 for the sausage packing, which implies that for this number of spheres the tetrahedron is more closely packed.
+It is also possible with some more effort to derive the exact formula for the volume of the tetrahedral convex hull 
+  
+    
+      
+        V
+      
+    
+    {\displaystyle V}
+  
+, which would involve subtracting the excess volume at the corners and edges of the tetrahedron. This allows the sausage packing to be proved non-optimal for smaller values of 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ and therefore 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+.
+
+
+=== Sausage conjecture ===
+The term sausage comes from the mathematician László Fejes Tóth, who posited the sausage conjecture in 1975, which concerns a generalized version of the problem to spheres, convex hulls, and volume in higher dimensions. A generalized sphere in 
+  
+    
+      
+        d
+      
+    
+    {\displaystyle d}
+  
+ dimensions is a 
+  
+    
+      
+        d
+      
+    
+    {\displaystyle d}
+  
+-dimensional body in which every boundary point lies equally far away from the midpoint. Fejes Tóth's sausage conjecture then states that from 
+  
+    
+      
+        d
+        =
+        5
+      
+    
+    {\displaystyle d=5}
+  
+ upwards it is always optimal to arrange the spheres along a straight line. That is, the sausage catastrophe no longer occurs once we go above 4 dimensions. The overall conjecture remains open. The best results so far are those of Ulrich Betke and Martin Henk, who proved the conjecture for dimensions 42 and above.
+
+
+== Parametric density and related methods ==
+While it may be proved that the sausage packing is not optimal for 56 spheres, and that there must be some other packing that is optimal, it is not known what the optimal packing looks like. It is difficult to find the optimal packing as there is no "simple" formula for the volume of an arbitrarily shaped cluster. Optimality (and non-optimality) is shown through appropriate estimates of the volume, using methods from convex geometry, such as the Brunn-Minkowski inequality, mixed Minkowski volumes and Steiner's formula. A crucial step towards a unified theory of both finite and infinite (lattice and non-lattice) sphere packings was the introduction of parametric densities by Jörg Wills in 1992. The parametric density takes into account the influence of the edges of the packing.
+The definition of density used earlier concerns the volume of the convex hull of the spheres (or convex bodies) 
+  
+    
+      
+        K
+      
+    
+    {\displaystyle K}
+  
+:
+
+  
+    
+      
+        δ
+        (
+        K
+        ,
+        
+          C
+          
+            n
+          
+        
+        )
+        =
+        
+          
+            
+              n
+              V
+              (
+              K
+              )
+            
+            
+              V
+              (
+              
+                C
+                
+                  n
+                
+              
+              +
+              K
+              )
+            
+          
+        
+      
+    
+    {\displaystyle \delta (K,C_{n})={\frac {nV(K)}{V(C_{n}+K)}}}
+  
+
+where 
+  
+    
+      
+        
+          C
+          
+            n
+          
+        
+      
+    
+    {\displaystyle C_{n}}
+  
+ is the convex hull of the 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ midpoints 
+  
+    
+      
+        
+          c
+          
+            i
+          
+        
+      
+    
+    {\displaystyle c_{i}}
+  
+ of the spheres 
+  
+    
+      
+        
+          K
+          
+            i
+          
+        
+      
+    
+    {\displaystyle K_{i}}
+  
+ (instead of the sphere, we can also take an arbitrary convex body for 
+  
+    
+      
+        K
+      
+    
+    {\displaystyle K}
+  
+). For a linear arrangement (sausage), the convex hull is a line segment through all the midpoints of the spheres. The plus sign in the formula refers to Minkowski addition of sets, so that 
+  
+    
+      
+        V
+        (
+        
+          C
+          
+            n
+          
+        
+        +
+        K
+        )
+      
+    
+    {\displaystyle V(C_{n}+K)}
+  
+ refers to the volume of the convex hull of the spheres.
+This definition works in two dimensions, where Laszlo Fejes-Toth, Claude Rogers and others used it to formulate a unified theory of finite and infinite packings. In three dimensions, Wills gives a simple argument that such a unified theory is not possible based on this definition: The densest finite arrangement of coins in three dimensions is the sausage with 
+  
+    
+      
+        δ
+        =
+        1
+      
+    
+    {\displaystyle \delta =1}
+  
+. However, the optimal infinite arrangement is a hexagonal arrangement with 
+  
+    
+      
+        δ
+        ≈
+        0.9
+      
+    
+    {\displaystyle \delta \approx 0.9}
+  
+, so the infinite value cannot be obtained as a limit of finite values. To solve this issue, Wills introduces a modification to the definition by adding a positive parameter 
+  
+    
+      
+        ρ
+      
+    
+    {\displaystyle \rho }
+  
+:
+
+  
+    
+      
+        δ
+        (
+        K
+        ,
+        
+          C
+          
+            n
+          
+        
+        )
+        =
+        
+          
+            
+              n
+              V
+              (
+              K
+              )
+            
+            
+              V
+              (
+              
+                C
+                
+                  n
+                
+              
+              +
+              ρ
+              K
+              )
+            
+          
+        
+      
+    
+    {\displaystyle \delta (K,C_{n})={\frac {nV(K)}{V(C_{n}+\rho K)}}}
+  
+
+  
+    
+      
+        ρ
+      
+    
+    {\displaystyle \rho }
+  
+ allows the influence of the edges to be considered (giving the convex hull a certain thickness). This is then combined with methods from the theory of mixed volumes and geometry of numbers by Hermann Minkowski.
+For each dimension 
+  
+    
+      
+        d
+        ≥
+        2
+      
+    
+    {\displaystyle d\geq 2}
+  
+ there are parameter values 
+  
+    
+      
+        
+          ρ
+          
+            s
+          
+        
+        (
+        d
+        )
+      
+    
+    {\displaystyle \rho _{s}(d)}
+  
+ and 
+  
+    
+      
+        
+          ρ
+          
+            c
+          
+        
+        (
+        d
+        )
+      
+    
+    {\displaystyle \rho _{c}(d)}
+  
+ such that for 
+  
+    
+      
+        ρ
+        ≤
+        
+          ρ
+          
+            s
+          
+        
+        (
+        d
+        )
+      
+    
+    {\displaystyle \rho \leq \rho _{s}(d)}
+  
+ the sausage is the densenst packing (for all integers 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+), while for 
+  
+    
+      
+        ρ
+        ≥
+        
+          ρ
+          
+            c
+          
+        
+        (
+        d
+        )
+      
+    
+    {\displaystyle \rho \geq \rho _{c}(d)}
+  
+ and suffiricently large 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ the cluster is densest. These parameters are dimension-specific. In two dimensions, 
+  
+    
+      
+        
+          ρ
+          
+            c
+          
+        
+        (
+        2
+        )
+        =
+        
+          ρ
+          
+            s
+          
+        
+        (
+        2
+        )
+        =
+        
+          
+            
+              3
+            
+            2
+          
+        
+      
+    
+    {\displaystyle \rho _{c}(2)=\rho _{s}(2)={\frac {\sqrt {3}}{2}}}
+  
+ so that there is a transition from sausages to clusters (sausage catastrophe).
+There holds an inequality:
+
+  
+    
+      
+        
+          
+            
+              V
+              (
+              
+                B
+                
+                  d
+                
+              
+              )
+            
+            
+              2
+              V
+              (
+              
+                B
+                
+                  d
+                  −
+                  1
+                
+              
+              )
+            
+          
+        
+        
+          
+            
+              ρ
+              
+                c
+              
+            
+            (
+            d
+            )
+          
+          
+            1
+            −
+            d
+          
+        
+        ≤
+        δ
+        (
+        
+          B
+          
+            d
+          
+        
+        )
+        ≤
+        
+          
+            
+              V
+              (
+              
+                B
+                
+                  d
+                
+              
+              )
+            
+            
+              2
+              V
+              (
+              
+                B
+                
+                  d
+                  −
+                  1
+                
+              
+              )
+            
+          
+        
+        
+          
+            
+              ρ
+              
+                s
+              
+            
+            (
+            d
+            )
+          
+          
+            1
+            −
+            d
+          
+        
+      
+    
+    {\displaystyle {\frac {V(B^{d})}{2V(B^{d-1})}}{\rho _{c}(d)}^{1-d}\leq \delta (B^{d})\leq {\frac {V(B^{d})}{2V(B^{d-1})}}{\rho _{s}(d)}^{1-d}}
+  
+
+where the volume of the unit ball 
+  
+    
+      
+        
+          B
+          
+            d
+          
+        
+      
+    
+    {\displaystyle B^{d}}
+  
+ in 
+  
+    
+      
+        d
+      
+    
+    {\displaystyle d}
+  
+ dimensions is 
+  
+    
+      
+        V
+        (
+        
+          B
+          
+            d
+          
+        
+        )
+      
+    
+    {\displaystyle V(B^{d})}
+  
+. For 
+  
+    
+      
+        d
+        =
+        2
+      
+    
+    {\displaystyle d=2}
+  
+, we have 
+  
+    
+      
+        
+          ρ
+          
+            s
+          
+        
+        (
+        d
+        )
+        =
+        
+          ρ
+          
+            c
+          
+        
+        (
+        d
+        )
+      
+    
+    {\displaystyle \rho _{s}(d)=\rho _{c}(d)}
+  
+ and it is predicted that this holds for all dimensions, in which case the value of 
+  
+    
+      
+        
+          ρ
+          
+            c
+          
+        
+        (
+        d
+        )
+      
+    
+    {\displaystyle \rho _{c}(d)}
+  
+ can be found from that of 
+  
+    
+      
+        δ
+        (
+        
+          B
+          
+            d
+          
+        
+        )
+      
+    
+    {\displaystyle \delta (B^{d})}
+  
+.
+
+
+== References ==
