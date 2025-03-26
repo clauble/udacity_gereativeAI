@@ -5,6 +5,7 @@ __pycache__/
 trained-lora-model/
 tmp_trainer/
 ft-distilbert/
+stanford-cars-dataset/
 
 
 # file types
@@ -18,3 +19,4 @@ embeddings.csv
 distances.csv
 distances*.csv
 book_description.html
+stanford-cars-dataset.zip
