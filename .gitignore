@@ -20,3 +20,4 @@ distances.csv
 distances*.csv
 book_description.html
 stanford-cars-dataset.zip
+sam_vit_l_0b3195.pth
