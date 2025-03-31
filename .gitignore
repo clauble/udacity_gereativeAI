@@ -12,6 +12,7 @@ stanford-cars-dataset/
 *.safetensors
 *.bak
 *.$$$
+*.lance
 
 # special files (too large and not neccessary):
 language_of_flowers.html
